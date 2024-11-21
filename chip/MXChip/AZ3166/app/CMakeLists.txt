@@ -20,9 +20,20 @@ set(SOURCES
     cloud_config.h
     console.c
     screen.c
+    mqtt_client.c
     sntp_client.c
+    pb_encode.c
+    pb_decode.c
+    pb_common.c
+    uri.pb.c
+    umessage.pb.c
+    uuid.pb.c
+    uattributes.pb.c
+    uoptions.pb.c
     main.c
     wwd_networking.c
+    read_sensors.c
+    icon_font.c
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

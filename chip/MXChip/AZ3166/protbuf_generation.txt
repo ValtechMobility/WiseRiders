@@ -1,0 +1,16 @@
+Install nanopb
+
+brew install nanopb
+
+# Copy all files to 
+/Users/janjongen/Documents/workspace/up-spec/up-core-api/uprotocol/v1
+
+Generate proto files via for example:
+
+nanopb_generator -s max_size:128 uattributes.proto
+
+# Copy all to project folder:
+/Users/janjongen/Documents/workspace/challenge-threadx-and-beyond/MXChip/AZ3166/app
+
+Adapt CMakeLists.txt
+

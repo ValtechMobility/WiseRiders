@@ -42,4 +42,6 @@ extern UART_HandleTypeDef UartHandle;
 /* Define prototypes. */
 void board_init(void);
 
+
+
 #endif // _BOARD_INIT_H

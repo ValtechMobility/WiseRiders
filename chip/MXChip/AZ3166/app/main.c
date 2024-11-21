@@ -14,11 +14,8 @@
  */
 
 #include <stdio.h>
-
+#include <stdbool.h>
 #include "tx_api.h"
-
-#include "nx_api.h"
-#include "nx_icmp.h"
 
 #include "board_init.h"
 #include "cmsis_utils.h"
@@ -27,139 +24,143 @@
 #include "wwd_networking.h"
 
 #include "cloud_config.h"
-#include <nxd_mqtt_client.h>
+#include "sensor.h"
+#include "shared.h"
 
+#include "nx_api.h"
+#include "mqtt_client.h"
 
+/*
+ * Comment in to use logger
+ */
+// #define USE_LOGGER
+
+TX_EVENT_FLAGS_GROUP mqtt_app_flag;
+
+#define DEMO_QUEUE_SIZE 24
+#define QUEUE_BYTE_POOL_SIZE 1024
+
+/*
+ * Queue setup
+*/
+UCHAR memory_area[QUEUE_BYTE_POOL_SIZE];
+TX_QUEUE queue_mqtt;
+TX_BYTE_POOL byte_pool_queue;
+
+/*
+* Define Thread configurations:
+*   - Stack sizes
+*/
 #define ECLIPSETX_THREAD_STACK_SIZE 4096
-#define ECLIPSETX_THREAD_PRIORITY   4
-#define MQTT_THREAD_STACK_SIZE 4096
-#define MQTT_THREAD_PRIORITY   4
+#define ECLIPSETX_THREAD_PRIORITY 4
+#define CRASH_THREAD_PRIORITY 3
 
-#define MQTT_CLIENT_STACK_SIZE 2048
-static ULONG mqtt_client_stack[MQTT_CLIENT_STACK_SIZE / sizeof(ULONG)];
-static ULONG client_memory[2000 / sizeof(ULONG)];
-
-#define IP_ADDRESS_NUMBER IP_ADDRESS(0, 0, 0, 0)
-#define NETX_IPV4_MASK IP_ADDRESS(255, 255, 255, 0)
-
-NX_IP ip_instance;
-NX_PACKET_POOL packet_pool;
 
 TX_THREAD eclipsetx_thread;
 ULONG eclipsetx_thread_stack[ECLIPSETX_THREAD_STACK_SIZE / sizeof(ULONG)];
 
-TX_THREAD mqtt_thread;
-ULONG mqtt_thread_stack[MQTT_THREAD_STACK_SIZE / sizeof(ULONG)];
+TX_THREAD flash_thread;
+ULONG flash_thread_stack[ECLIPSETX_THREAD_STACK_SIZE / sizeof(ULONG)];
 
-// MQTT Client
-static NXD_MQTT_CLIENT mqtt_client;
+TX_THREAD logger_thread;
+ULONG logger_thread_stack[ECLIPSETX_THREAD_STACK_SIZE / sizeof(ULONG)];
 
-// MQTT Broker Details
-#define MQTT_BROKER_ADDRESS IP_ADDRESS(5, 196, 78, 28) // 5.196.78.28
-#define MQTT_BROKER_PORT 1883
-#define MQTT_TOPIC "telemetry/temperature"
-#define MQTT_USERNAME "benedikt" // Optional
-#define MQTT_PASSWORD "1234aBcd" // Optional
-#define CLIENT_ID_STRING "awesome_test_client"
-#define STRLEN(p) (sizeof(p) - 1)
-#define MQTT_KEEP_ALIVE_TIMER 300
+TX_THREAD read_sensors_thread;
+char read_sensors_thread_stack[1024];
 
-TX_EVENT_FLAGS_GROUP                mqtt_app_flag;
-#define DEMO_MESSAGE_EVENT          1
-#define DEMO_ALL_EVENTS             3
+void read_sensors_task(ULONG _unused);
 
-/* Declare buffers to hold message and topic. */
-static UCHAR message_buffer[NXD_MQTT_MAX_MESSAGE_LENGTH];
-static UCHAR topic_buffer[NXD_MQTT_MAX_TOPIC_NAME_LENGTH];
+TX_THREAD crash_thread;
+ULONG crash_thread_stack[ECLIPSETX_THREAD_STACK_SIZE / sizeof(ULONG)];
+void crash_detect_task(ULONG _unused);
 
+/*
+* Application funcations. 
+*/
 
-static VOID my_notify_func(NXD_MQTT_CLIENT* client_ptr, UINT number_of_messages)
+// Implements the blink part as reaction to an incoming command message.
+void blink_5_s()
 {
-    printf("Got a message.");
-    NX_PARAMETER_NOT_USED(client_ptr);
-    NX_PARAMETER_NOT_USED(number_of_messages);
-    tx_event_flags_set(&mqtt_app_flag, DEMO_MESSAGE_EVENT, TX_OR);
-    return;
+    // Each iteration takes 200ms (ON, OFF) so blinking for 6seconds means 6000/200 = 30
+    for (int i = 0; i <= 30; i++)
+    {
+        RGB_LED_SET_R(0);
+        tx_thread_sleep(10);
+        RGB_LED_SET_R(255);
+        tx_thread_sleep(10);
+    }
 }
 
-void start_mqtt()
+static void start_blink_thread(ULONG parameter)
 {
-    UINT status;
-    NXD_ADDRESS server_ip;
-    ULONG events;
-    UINT topic_length, message_length;
+    ULONG received_message = 0;
+    UINT queue_status;
 
-    printf("Starting MQTT.");
-
-    // Create the client instance
-    status = nxd_mqtt_client_create(&mqtt_client, "mqtt_client", CLIENT_ID_STRING, STRLEN(CLIENT_ID_STRING), &nx_ip, nx_pool, (VOID *)mqtt_client_stack, sizeof(mqtt_client_stack), MQTT_THREAD_PRIORITY, (UCHAR *)client_memory, sizeof(client_memory));
-
-    if (status != TX_SUCCESS)
-        {
-            printf("ERROR: MQTT client creation failed\r\n");
-        }
-
-    printf("MQTT Trying to create flags.");
-    tx_event_flags_create(&mqtt_app_flag, "my app event");
-
-    server_ip.nxd_ip_version = 4;
-    server_ip.nxd_ip_address.v4 = MQTT_BROKER_ADDRESS;
-
-    printf("MQTT Trying to connect.");
-    status = nxd_mqtt_client_connect(&mqtt_client, &server_ip, MQTT_BROKER_PORT, MQTT_KEEP_ALIVE_TIMER, 0, NX_WAIT_FOREVER);
-
-    if (status != TX_SUCCESS)
-        {
-            printf("ERROR: MQTT client connect failed\r\n");
-        }
-
-    printf("MQTT Trying to publish.");
-    status = nxd_mqtt_client_publish(&mqtt_client, MQTT_TOPIC, STRLEN(MQTT_TOPIC), "Device Booted.", STRLEN("Hello World!"), 0, 0, NX_WAIT_FOREVER);
-
-    if (status != TX_SUCCESS)
-        {
-            printf("ERROR: MQTT client publish failed\r\n");
-        }
-
-    printf("MQTT Trying to subscribe.");
-    status = nxd_mqtt_client_subscribe(&mqtt_client, MQTT_TOPIC, STRLEN(MQTT_TOPIC), 0);
-
-    if (status != TX_SUCCESS)
-        {
-            printf("ERROR: MQTT client subscribe failed\r\n");
-        }
-
-    printf("MQTT Trying to set callback.");
-    status = nxd_mqtt_client_receive_notify_set(&mqtt_client, my_notify_func);
-
-    if (status != TX_SUCCESS)
-        {
-            printf("ERROR: MQTT client set callback failed\r\n");
-        }
-
-    printf("MQTT Trying to get flags.");
-    tx_event_flags_get(&mqtt_app_flag, DEMO_ALL_EVENTS, TX_OR_CLEAR, &events, TX_WAIT_FOREVER);
-    if(events & DEMO_MESSAGE_EVENT)
+    while (1)
     {
-        status = nxd_mqtt_client_message_get(&mqtt_client, topic_buffer, sizeof(topic_buffer), &topic_length, 
-                                             message_buffer, sizeof(message_buffer), &message_length);
-        if(status == NXD_MQTT_SUCCESS)
+        RGB_LED_SET_R(0);
+        queue_status = tx_queue_receive(&queue_mqtt, &received_message, TX_WAIT_FOREVER);
+        if (queue_status != TX_SUCCESS)
         {
-            topic_buffer[topic_length] = 0;
-            message_buffer[message_length] = 0;
-            printf("topic = %s, message = %s\n", topic_buffer, message_buffer);
+            printf("Queue receive failed \r\n");
+            tx_thread_sleep(200);
+        }
+        if (received_message == 1)
+        {
+            blink_5_s();
         }
     }
-
-    printf("Listening for messages.");
-
-    while (1) {}
 }
 
-static void eclipsetx_thread_entry(ULONG parameter)
-
+#ifdef USE_LOGGER
+static void logger_thread_entry(ULONG parameter)
 {
-    UINT status;
+    while (1)
+    {
+        // printf("ThreadX Test-Loop\n");
+
+        hts221_data_t s_data = hts221_data_read();
+        int hum = (int)s_data.humidity_perc;
+        int temp = (int)s_data.temperature_degC;
+        printf("*** hts221 ***\n");
+        printf("hum %i\n", hum);
+        printf("hts temp %i\n", temp);
+        printf("\n");
+
+        lsm6dsl_data_t lsm_data = lsm6dsl_data_read();
+        int acc1 = (int)lsm_data.acceleration_mg[0];
+        int acc2 = (int)lsm_data.acceleration_mg[1];
+        int acc3 = (int)lsm_data.acceleration_mg[2];
+        int ar1 = (int)lsm_data.angular_rate_mdps[0];
+        int ar2 = (int)lsm_data.angular_rate_mdps[1];
+        int ar3 = (int)lsm_data.angular_rate_mdps[2];
+        int temp1 = (int)lsm_data.temperature_degC;
+        printf("*** lsm6ds ***l\n");
+        printf("acceleration_mg1 %i\n", acc1);
+        printf("acceleration_mg2 %i\n", acc2);
+        printf("acceleration_mg3 %i\n", acc3);
+        printf("angular_rate_mdps1 %i\n", ar1);
+        printf("angular_rate_mdps2 %i\n", ar2);
+        printf("angular_rate_mdps3 %i\n", ar3);
+        printf("lms temp %i\n", temp1);
+        printf("\n");
+
+        lps22hb_t lps_data = lps22hb_data_read();
+        int press = (int)lps_data.pressure_hPa;
+        int temp2 = (int)lps_data.temperature_degC;
+        printf("*** lps22hb ***\n");
+        printf("press %i\n", press);
+        printf("lps temp %i\n", temp2);
+        printf("\n\n\n");
+
+        tx_thread_sleep(100);
+    }
+}
+#endif
+
+static void eclipsetx_thread_entry(ULONG parameter)
+{
+    bool status;
 
     printf("Starting Eclipse ThreadX thread\r\n\r\n");
 
@@ -171,31 +172,115 @@ static void eclipsetx_thread_entry(ULONG parameter)
 
     wwd_network_connect();
 
-    start_mqtt();
+    thread_mqtt_entry(&nx_ip, nx_pool);
 }
 
-void tx_application_define(void* first_unused_memory)
+void tx_application_define(void *first_unused_memory)
 {
     systick_interval_set(TX_TIMER_TICKS_PER_SECOND);
+    CHAR *pointer = TX_NULL;
+    /* Allocate the message queue.  */
+    tx_byte_pool_create(&byte_pool_queue, "byte pool 0", memory_area, QUEUE_BYTE_POOL_SIZE);
 
-    // Create ThreadX thread
-    UINT status = tx_thread_create(&eclipsetx_thread,
-        "Eclipse ThreadX Thread",
-        eclipsetx_thread_entry,
-        0,
-        eclipsetx_thread_stack,
-        ECLIPSETX_THREAD_STACK_SIZE,
-        ECLIPSETX_THREAD_PRIORITY,
-        ECLIPSETX_THREAD_PRIORITY,
-        TX_NO_TIME_SLICE,
-        TX_AUTO_START);
+    tx_byte_allocate(&byte_pool_queue, (VOID **)&pointer, DEMO_QUEUE_SIZE * sizeof(ULONG), TX_NO_WAIT);
+    UINT status = tx_queue_create(&queue_mqtt, "queue 0", TX_1_ULONG, pointer, DEMO_QUEUE_SIZE * sizeof(ULONG));
+    if (status != TX_SUCCESS)
+    {
+        printf("ERROR: Queue Creation failed with %d \r\n", status);
+    }
+    // Create network thread
+    status = tx_thread_create(&eclipsetx_thread,
+                              "Eclipse ThreadX Thread",
+                              eclipsetx_thread_entry,
+                              0,
+                              eclipsetx_thread_stack,
+                              ECLIPSETX_THREAD_STACK_SIZE,
+                              ECLIPSETX_THREAD_PRIORITY,
+                              ECLIPSETX_THREAD_PRIORITY,
+                              TX_NO_TIME_SLICE,
+                              TX_AUTO_START);
 
     if (status != TX_SUCCESS)
     {
-        printf("ERROR: Eclipse ThreadX thread creation failed\r\n");
+        printf("ERROR: Eclipse (Network) ThreadX thread creation failed\r\n");
+    }
+
+    // Create blinky thread
+    status = tx_thread_create(&flash_thread,
+                              "LED flash thread",
+                              start_blink_thread,
+                              0,
+                              flash_thread_stack,
+                              ECLIPSETX_THREAD_STACK_SIZE,
+                              ECLIPSETX_THREAD_PRIORITY,
+                              ECLIPSETX_THREAD_PRIORITY,
+                              TX_NO_TIME_SLICE,
+                              TX_AUTO_START);
+
+    if (status != TX_SUCCESS)
+    {
+        printf("ERROR: LED-Flash thread creation failed\r\n");
+    }
+
+#ifdef USE_LOGGER
+    // Create logger thread
+    status = tx_thread_create(&logger_thread,
+                              "Eclipse ThreadX Thread",
+                              logger_thread_entry,
+                              0,
+                              logger_thread_stack,
+                              ECLIPSETX_THREAD_STACK_SIZE,
+                              ECLIPSETX_THREAD_PRIORITY,
+                              ECLIPSETX_THREAD_PRIORITY,
+                              TX_NO_TIME_SLICE,
+                              TX_AUTO_START);
+
+    if (status != TX_SUCCESS)
+    {
+        printf("ERROR: logger thread creation failed\r\n");
+    }
+#endif
+
+    // Create the thread
+    status = tx_thread_create(
+        &read_sensors_thread,              // Thread control block
+        "Read Sensors",                    // Thread name
+        read_sensors_task,                 // Thread entry function
+        0,                                 // Input parameter
+        read_sensors_thread_stack,         // Thread stack pointer
+        sizeof(read_sensors_thread_stack), // Stack size
+        ECLIPSETX_THREAD_PRIORITY,         // Priority
+        ECLIPSETX_THREAD_PRIORITY,         // Preemption threshold
+        TX_NO_TIME_SLICE,                  // No time-slicing
+        TX_AUTO_START                      // Auto-start the thread
+    );
+
+    if (status != TX_SUCCESS)
+    {
+        printf("Error creating thread: %d\n", status);
+    }
+    else
+    {
+        printf("Thread created : %d\n", status);
+    }
+
+    // Create ThreadX thread
+    status = tx_thread_create(&crash_thread,
+                              "Crash Detector",
+                              crash_detect_task,
+                              0,
+                              crash_thread_stack,
+                              ECLIPSETX_THREAD_STACK_SIZE,
+                              CRASH_THREAD_PRIORITY,
+                              CRASH_THREAD_PRIORITY,
+                              TX_NO_TIME_SLICE,
+                              TX_AUTO_START);
+
+    if (status != TX_SUCCESS)
+    {
+        printf("ERROR: Crash Detector thread creation failed. Reason %d\r\n", status);
     }
 }
-
 
 int main(void)
 {

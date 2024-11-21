@@ -20,6 +20,9 @@
 #include "sensor.h"
 #include "ssd1306.h"
 
+char button_a_pressed_count = 0;
+char button_b_pressed_count = 0;
+
 /* Private handler declarations */
 I2C_HandleTypeDef I2cHandle;
 
@@ -331,28 +334,41 @@ static void UART_Console_Init(void)
     }
 }
 
-static int val;
+//static int val;
 
 __weak void button_a_callback()
 {
 
-    WIFI_LED_ON();
-    CLOUD_LED_ON();
-    USER_LED_ON();
+    //WIFI_LED_ON();
+
+    // 4 screens starting from 0
+
     if (BUTTON_A_IS_PRESSED)
     {
-        val += 32;
-        if (val > 2047)
-            val = 2047;
-        RGB_LED_SET_R(val);
-        RGB_LED_SET_G(val);
-        RGB_LED_SET_B(val);
+        button_a_pressed_count = (button_a_pressed_count +1)  % 4;
+        button_b_pressed_count = 0;
     }
+    // CLOUD_LED_ON();
+    // USER_LED_ON();
+    // if (BUTTON_A_IS_PRESSED)
+    // {
+    //     val += 32;
+    //     if (val > 2047)
+    //         val = 2047;
+    //     RGB_LED_SET_R(val);
+    //     RGB_LED_SET_G(val);
+    //     RGB_LED_SET_B(val);
+    // }
 }
 
 __weak void button_b_callback()
 {
 
+    if (BUTTON_B_IS_PRESSED)
+    {
+        button_b_pressed_count = button_b_pressed_count + 1;  
+    }
+    /*
     WIFI_LED_OFF();
     CLOUD_LED_OFF();
     USER_LED_OFF();
@@ -365,6 +381,7 @@ __weak void button_b_callback()
         RGB_LED_SET_G(val);
         RGB_LED_SET_B(val);
     }
+    */
 }
 
 void EXTI4_IRQHandler(void)
