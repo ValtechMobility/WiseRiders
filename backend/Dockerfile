@@ -25,9 +25,9 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 WORKDIR /usr/src/app
 
 # Copy Rust code into the container
-COPY . .
+COPY target/release/uprotocol_backend .
 
 # Build and execute the Rust program
 RUN cargo build --release
 
-CMD ["./target/release/uprotocol_backend"]
+CMD ["./uprotocol_backend"]

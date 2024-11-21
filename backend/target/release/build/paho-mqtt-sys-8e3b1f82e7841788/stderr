@@ -1,0 +1,56 @@
+fatal: not a git repository (or any of the parent directories): .git
+CMake Deprecation Warning at CMakeLists.txt:20 (CMAKE_MINIMUM_REQUIRED):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_ASM_COMPILER
+    CMAKE_ASM_FLAGS
+    CMAKE_CXX_COMPILER
+    CMAKE_CXX_FLAGS
+
+
+make: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
+/Users/benediktillich/.cargo/registry/src/index.crates.io-6f17d22bba15001f/paho-mqtt-sys-0.9.0/paho.mqtt.c/src/WebSocket.c:1324:3: warning: 'SHA1_Init' is deprecated [-Wdeprecated-declarations]
+ 1324 |                 SHA1_Init( &ctx );
+      |                 ^
+/Users/benediktillich/repos/WiseRiders/backend/target/release/build/openssl-sys-d97ae5dde58297ca/out/openssl-build/install/include/openssl/sha.h:49:1: note: 'SHA1_Init' has been explicitly marked deprecated here
+   49 | OSSL_DEPRECATEDIN_3_0 int SHA1_Init(SHA_CTX *c);
+      | ^
+/Users/benediktillich/repos/WiseRiders/backend/target/release/build/openssl-sys-d97ae5dde58297ca/out/openssl-build/install/include/openssl/macros.h:206:49: note: expanded from macro 'OSSL_DEPRECATEDIN_3_0'
+  206 | #   define OSSL_DEPRECATEDIN_3_0                OSSL_DEPRECATED(3.0)
+      |                                                 ^
+/Users/benediktillich/repos/WiseRiders/backend/target/release/build/openssl-sys-d97ae5dde58297ca/out/openssl-build/install/include/openssl/macros.h:62:52: note: expanded from macro 'OSSL_DEPRECATED'
+   62 | #     define OSSL_DEPRECATED(since) __attribute__((deprecated))
+      |                                                    ^
+/Users/benediktillich/.cargo/registry/src/index.crates.io-6f17d22bba15001f/paho-mqtt-sys-0.9.0/paho.mqtt.c/src/WebSocket.c:1325:3: warning: 'SHA1_Update' is deprecated [-Wdeprecated-declarations]
+ 1325 |                 SHA1_Update( &ctx, ws_key, strlen(ws_key));
+      |                 ^
+/Users/benediktillich/repos/WiseRiders/backend/target/release/build/openssl-sys-d97ae5dde58297ca/out/openssl-build/install/include/openssl/sha.h:50:1: note: 'SHA1_Update' has been explicitly marked deprecated here
+   50 | OSSL_DEPRECATEDIN_3_0 int SHA1_Update(SHA_CTX *c, const void *data, size_t len);
+      | ^
+/Users/benediktillich/repos/WiseRiders/backend/target/release/build/openssl-sys-d97ae5dde58297ca/out/openssl-build/install/include/openssl/macros.h:206:49: note: expanded from macro 'OSSL_DEPRECATEDIN_3_0'
+  206 | #   define OSSL_DEPRECATEDIN_3_0                OSSL_DEPRECATED(3.0)
+      |                                                 ^
+/Users/benediktillich/repos/WiseRiders/backend/target/release/build/openssl-sys-d97ae5dde58297ca/out/openssl-build/install/include/openssl/macros.h:62:52: note: expanded from macro 'OSSL_DEPRECATED'
+   62 | #     define OSSL_DEPRECATED(since) __attribute__((deprecated))
+      |                                                    ^
+/Users/benediktillich/.cargo/registry/src/index.crates.io-6f17d22bba15001f/paho-mqtt-sys-0.9.0/paho.mqtt.c/src/WebSocket.c:1326:3: warning: 'SHA1_Final' is deprecated [-Wdeprecated-declarations]
+ 1326 |                 SHA1_Final( sha_hash, &ctx );
+      |                 ^
+/Users/benediktillich/repos/WiseRiders/backend/target/release/build/openssl-sys-d97ae5dde58297ca/out/openssl-build/install/include/openssl/sha.h:51:1: note: 'SHA1_Final' has been explicitly marked deprecated here
+   51 | OSSL_DEPRECATEDIN_3_0 int SHA1_Final(unsigned char *md, SHA_CTX *c);
+      | ^
+/Users/benediktillich/repos/WiseRiders/backend/target/release/build/openssl-sys-d97ae5dde58297ca/out/openssl-build/install/include/openssl/macros.h:206:49: note: expanded from macro 'OSSL_DEPRECATEDIN_3_0'
+  206 | #   define OSSL_DEPRECATEDIN_3_0                OSSL_DEPRECATED(3.0)
+      |                                                 ^
+/Users/benediktillich/repos/WiseRiders/backend/target/release/build/openssl-sys-d97ae5dde58297ca/out/openssl-build/install/include/openssl/macros.h:62:52: note: expanded from macro 'OSSL_DEPRECATED'
+   62 | #     define OSSL_DEPRECATED(since) __attribute__((deprecated))
+      |                                                    ^
+3 warnings generated.

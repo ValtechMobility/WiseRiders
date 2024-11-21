@@ -11,6 +11,22 @@ To run the backend service just run
 cargo run
 ```
 
+## Build the binary
+
+To build the binary for linux run the following with cross build installed
+
+```bash
+cross build --target aarch64-unknown-linux-gnu
+```
+
+## Build a container
+
+To build an image for running the backend in a container run 
+
+```bash
+docker build -t 
+```
+
 ## What does this backend do?
 
 The backend consists of two threads. One that connects to the MXChip via the UProtocol MQTT transport, and the other one that connects to the app via a very basic TCP connection.

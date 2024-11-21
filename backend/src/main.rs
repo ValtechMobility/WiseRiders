@@ -172,3 +172,50 @@ async fn main() {
         });
     };
 }
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    static ACCIDENT_STATUS: Lazy<AtomicBool> = Lazy::new(|| AtomicBool::new(false));
+
+    fn set_flag() {
+        ACCIDENT_STATUS.store(true, Ordering::Relaxed);
+    }
+
+    fn check_flag() -> bool {
+        ACCIDENT_STATUS.load(Ordering::Relaxed)
+    }
+
+    struct TestListener;
+
+    #[async_trait]
+    impl UListener for TestListener {
+        async fn on_receive(&self, _msg: UMessage) {
+            set_flag();
+        }
+    }
+
+    #[tokio::test]
+    async fn test_mqtt_init() {
+        let client = build_mqtt().await.unwrap();
+
+        let test_receiver: Arc<dyn UListener> = Arc::new(PublishReceiver);
+
+        let test_filter = UUri::try_from("test").unwrap();
+
+        client.register_listener(&test_filter, None, test_receiver.clone())
+        .await.unwrap();
+
+        let message = UMessageBuilder::publish(test_filter)
+                    .build_with_payload(
+                        vec![1],
+                        UPayloadFormat::UPAYLOAD_FORMAT_TEXT,
+                    )
+                    .expect("Failed to build message");
+
+        client.send(message).await.unwrap();
+
+        assert_eq!(check_flag(), true)
+    }
+}
