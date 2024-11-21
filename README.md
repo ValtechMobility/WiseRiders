@@ -14,6 +14,10 @@
 
 # Eclipse ThreadX hackathon challenge - uProtocol / ThreadX
 
+## Introduction 
+
+// High level summary, why? how? challenges? added value? 
+
 ## Application 
 
 ### Microcontroller
@@ -79,6 +83,28 @@ A backend application written in Rust which leverages a patched version of https
 
 Mobile application which talks to the backend via HTTP(S) and sends uProtocol (Honk&Flash) messages to the device. It also receives and displays the crash detection events.
 
+## Testing strategy
+
+We try to test as often as possible and work in small increments. For the Microcontroller part testing is mostly done via manual testing. Test cases are described in the Microcontroller section. The Backend (Rust) part uses unit tests which are implemented and executed with the embedded rust unit test runner via 
+```
+cargo test
+```
+
+### Microcontroller
+
+Testcases:
+
+- Startup and check UART log for WIFI messages
+- Switch through the menu
+  - Toggle Ambient light and check that displayed colour matches LED color
+  - Check accelerometer dashboard to reflect small accelerationn
+- Via mobile phone trigger Honk&Flash operation and check that light is flashing
+- Trigger crash mode and check via Mobile Phone that the crash is indicated. Restart controller.
+
+
+### Backend
+
+Testcases can be found in [#test] section of main.rs
 
 ## Cloning this repository
 Eclipse ThreadX and Eclipse ThreadX NetX Duo are included as submodules.
