@@ -1,0 +1,30 @@
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/MQTTAsync_publish.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/MQTTAsync_publish_time.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/MQTTAsync_subscribe.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/MQTTClient_publish.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/MQTTClient_publish_async.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/MQTTClient_subscribe.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/paho_c_pub.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/paho_c_sub.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/paho_cs_pub.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/paho_cs_sub.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/samples/pubsub_opts.c
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/CONTRIBUTING.md
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/epl-v20
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/edl-v10
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/README.md
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/share/doc/Eclipse Paho C/notice.html
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/lib/libpaho-mqtt3c.a
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/lib/libpaho-mqtt3a.a
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/include/MQTTAsync.h
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/include/MQTTClient.h
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/include/MQTTClientPersistence.h
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/include/MQTTProperties.h
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/include/MQTTReasonCodes.h
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/include/MQTTSubscribeOpts.h
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/include/MQTTExportDeclarations.h
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/lib/libpaho-mqtt3cs.a
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/lib/libpaho-mqtt3as.a
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/lib/cmake/eclipse-paho-mqtt-c/eclipse-paho-mqtt-cConfig.cmake
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/lib/cmake/eclipse-paho-mqtt-c/eclipse-paho-mqtt-cConfig-debug.cmake
+/Users/benediktillich/repos/uprotocol_backend/target/debug/build/paho-mqtt-sys-14108a278aa9be6c/out/lib/cmake/eclipse-paho-mqtt-c/eclipse-paho-mqtt-cConfigVersion.cmake
