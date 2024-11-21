@@ -11,6 +11,12 @@ To run the backend service just run
 cargo run
 ```
 
+To run the tests run 
+
+```bash
+cargo test
+```
+
 ## Build the binary
 
 To build the binary for linux run the following with cross build installed

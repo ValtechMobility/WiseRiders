@@ -62,7 +62,7 @@ impl UListener for PublishReceiver {
 }
 
 
-async fn build_mqtt() -> Result<Arc<dyn UTransport>, UStatus> {
+async fn build_mqtt(hostname: String, port: u16) -> Result<Arc<dyn UTransport>, UStatus> {
     env_logger::init();
 
     info!("Started Backend.");
@@ -71,8 +71,8 @@ async fn build_mqtt() -> Result<Arc<dyn UTransport>, UStatus> {
 
     let mqtt_config = MqttConfig {
         mqtt_protocol: up_client_mqtt5_rust::MqttProtocol::Mqtt,
-        mqtt_port: MQTT_PORT,
-        mqtt_hostname: MQTT_HOSTNAME.to_string(),
+        mqtt_port: port,
+        mqtt_hostname: hostname,
         max_buffered_messages: 100,
         max_subscriptions: 100,
         session_expiry_interval: 3600,
@@ -107,7 +107,7 @@ async fn main() {
     )
     .unwrap();
 
-    let client = build_mqtt().await.unwrap();
+    let client = build_mqtt(MQTT_HOSTNAME.to_string(), MQTT_PORT).await.unwrap();
 
     let publish_receiver: Arc<dyn UListener> = Arc::new(PublishReceiver);
 
@@ -198,14 +198,14 @@ mod test {
 
     #[tokio::test]
     async fn test_mqtt_init() {
-        let client = build_mqtt().await.unwrap();
+        let client = build_mqtt("localhost".to_string(), 1883).await.unwrap();
 
-        let test_receiver: Arc<dyn UListener> = Arc::new(PublishReceiver);
+        let test_receiver: Arc<dyn UListener> = Arc::new(TestListener);
 
-        let test_filter = UUri::try_from("test").unwrap();
+        let test_filter = UUri::try_from_parts("test", 1, 2, 0x8000).unwrap();
 
         client.register_listener(&test_filter, None, test_receiver.clone())
-        .await.unwrap();
+            .await.unwrap();
 
         let message = UMessageBuilder::publish(test_filter)
                     .build_with_payload(
