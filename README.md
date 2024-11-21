@@ -16,7 +16,12 @@
 
 ## Introduction 
 
-// High level summary, why? how? challenges? added value? 
+Main goal of this challenge is to show that uProtocol can hold up to its promises to provide a well defined, working and protocol agnostic service mesh which can be implemented from the cloud to microcontrollers running a safety certified RTOS here ThreadX. To show this we leverage uProtocol to implement a small but interesting case of a remote service namely "Honk&Flash". The command, a uMessage is triggered on an Android app written in Rust and travels via the MQTT uProtocol transport down to a microcontroller where the protobuf message gets deserialized and triggers the actual honk&flash via blinking in LED. 
+
+We also implemented the communication in the other way and for this communication we choose to implement a crash detection. Here the technological choice of threadX makes a lot of sense since it provided us with the necessary abstractions to have the crash detection running with higher priority than the other task hence fulfilling strict timing requirents. After detecting a crash a uMessage is constructed, serialized via protobuf and send over the wire via MQTT. Here it is picked up by the mobile phone and notifies the user that a crash has happend. This is also shown on the uC screen.
+
+From a technical standpoint this challenge proves that it is feasible to implement uProtocol ie. uMessage (de)serialization within a uC / RTOS setting and that it is possible to bridge a lot of different technologies and provide a usable abstraction to develop software for the SDV. 
+
 
 ## Application 
 
