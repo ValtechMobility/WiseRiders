@@ -37,7 +37,7 @@
     <button onclick={flash}
       ><img src="/honk.svg" alt="Honk and flash" width="100" /></button
     >
-    {#if show_ip}
+    {#if crashed}
       <p>Driver crashed</p>
     {/if}
   {/if}
@@ -46,7 +46,9 @@
 <style>
   p {
     color: #fff;
-    font-size: 22px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
   }
 
   .container {
@@ -68,13 +70,13 @@
     height: 200px;
     border: 0;
     border-radius: 10px;
-    box-shadow: 30px 30px 40px #aaa;
+    box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.3);
     color: #fff;
     font-size: 20px;
   }
 
   button:active {
-    box-shadow: 10px 10px 40px #aaa;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.3);
     transform: translate3d(5px, 5px, 0);
     transition: all 0.1s;
   }
