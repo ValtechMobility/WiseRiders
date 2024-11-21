@@ -22,6 +22,7 @@ We also implemented the communication in the other way and for this communicatio
 
 From a technical standpoint this challenge proves that it is feasible to implement uProtocol ie. uMessage (de)serialization within a uC / RTOS setting and that it is possible to bridge a lot of different technologies and provide a usable abstraction to develop software for the SDV. 
 
+Checkout the [demo folder](demo) for pictures and videos of our demo.
 
 ## Application 
 
