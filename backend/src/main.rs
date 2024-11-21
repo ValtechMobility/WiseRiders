@@ -11,15 +11,17 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-use log::info;
-use std::io::{Read, Write};
-use std::sync::Arc;
-use up_rust::{UListener, UMessage, UMessageBuilder, UPayloadFormat, UStatus, UTransport, UUri, UUID};
-use up_client_mqtt5_rust::{MqttConfig, UPClientMqtt, UPClientMqttType};
 use async_trait::async_trait;
-use std::net::TcpListener;
+use log::info;
 use once_cell::sync::Lazy;
+use std::io::{Read, Write};
+use std::net::TcpListener;
 use std::sync::atomic::{AtomicBool, Ordering};
+use std::sync::Arc;
+use up_client_mqtt5_rust::{MqttConfig, UPClientMqtt, UPClientMqttType};
+use up_rust::{
+    UListener, UMessage, UMessageBuilder, UPayloadFormat, UStatus, UTransport, UUri, UUID,
+};
 
 const MQTT_PORT: u16 = 1883;
 const MQTT_HOSTNAME: &str = "test.mosquitto.org";
@@ -55,12 +57,11 @@ impl UListener for PublishReceiver {
         let Some(payload_bytes) = msg.payload else {
             panic!("No bytes available");
         };
-        println!("Bytes: {:?}",payload_bytes);
+        println!("Bytes: {:?}", payload_bytes);
 
         set_flag();
     }
 }
-
 
 async fn build_mqtt(hostname: String, port: u16) -> Result<Arc<dyn UTransport>, UStatus> {
     env_logger::init();
@@ -94,10 +95,8 @@ async fn build_mqtt(hostname: String, port: u16) -> Result<Arc<dyn UTransport>, 
     Ok(publisher)
 }
 
-
 #[tokio::main]
 async fn main() {
-
     // This is the URI that we want to receive from
     let source_filter = UUri::try_from_parts(
         SUB_TOPIC_AUTHORITY,
@@ -107,14 +106,18 @@ async fn main() {
     )
     .unwrap();
 
-    let client = build_mqtt(MQTT_HOSTNAME.to_string(), MQTT_PORT).await.unwrap();
+    let client = build_mqtt(MQTT_HOSTNAME.to_string(), MQTT_PORT)
+        .await
+        .unwrap();
 
     let publish_receiver: Arc<dyn UListener> = Arc::new(PublishReceiver);
 
     let listener_client = client.clone();
-    listener_client.register_listener(&source_filter, None, publish_receiver.clone())
-        .await.unwrap();
-    
+    listener_client
+        .register_listener(&source_filter, None, publish_receiver.clone())
+        .await
+        .unwrap();
+
     let listener = TcpListener::bind(format!("0.0.0.0:{}", 80)).unwrap();
 
     loop {
@@ -155,22 +158,18 @@ async fn main() {
                 .unwrap();
 
                 let message = UMessageBuilder::publish(source)
-                    .build_with_payload(
-                        vec![1],
-                        UPayloadFormat::UPAYLOAD_FORMAT_TEXT,
-                    )
+                    .build_with_payload(vec![1], UPayloadFormat::UPAYLOAD_FORMAT_TEXT)
                     .expect("Failed to build message");
 
                 send_client.send(message).await.unwrap();
                 info!("sent a message to chip!")
-
             } else {
                 println!("Unknown request method");
                 let response = "HTTP/1.1 400 Bad Request\r\n\r\nUnsupported method!";
                 socket.write_all(response.as_bytes()).unwrap();
             }
         });
-    };
+    }
 }
 
 #[cfg(test)]
@@ -204,15 +203,14 @@ mod test {
 
         let test_filter = UUri::try_from_parts("test", 1, 2, 0x8000).unwrap();
 
-        client.register_listener(&test_filter, None, test_receiver.clone())
-            .await.unwrap();
+        client
+            .register_listener(&test_filter, None, test_receiver.clone())
+            .await
+            .unwrap();
 
         let message = UMessageBuilder::publish(test_filter)
-                    .build_with_payload(
-                        vec![1],
-                        UPayloadFormat::UPAYLOAD_FORMAT_TEXT,
-                    )
-                    .expect("Failed to build message");
+            .build_with_payload(vec![1], UPayloadFormat::UPAYLOAD_FORMAT_TEXT)
+            .expect("Failed to build message");
 
         client.send(message).await.unwrap();
 
