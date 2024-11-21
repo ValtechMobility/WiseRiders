@@ -1,0 +1,840 @@
+DEBUG: all keys: APPLINKDIR, BINDIR, CMAKECONFIGDIR, ENGINESDIR, INCLUDEDIR, LDLIBS, LIBDIR, MODULESDIR, PKGCONFIGDIR, PREFIX, VERSION, libdir
+DEBUG: PREFIX = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install => PREFIX = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install
+DEBUG: libdir = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib => libdir = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib
+DEBUG: BINDIR = bin => BINDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/bin, BINDIR_REL_PREFIX = bin
+DEBUG: LIBDIR = lib => LIBDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib, LIBDIR_REL_PREFIX = lib
+DEBUG: INCLUDEDIR = include => INCLUDEDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/include, INCLUDEDIR_REL_PREFIX = include
+DEBUG: APPLINKDIR = include/openssl => APPLINKDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/include/openssl, APPLINKDIR_REL_PREFIX = include/openssl
+DEBUG: ENGINESDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib/engines-3 => ENGINESDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib/engines-3, ENGINESDIR_REL_LIBDIR = engines-3
+DEBUG: MODULESDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib/ossl-modules => MODULESDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib/ossl-modules, MODULESDIR_REL_LIBDIR = ossl-modules
+DEBUG: PKGCONFIGDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib/pkgconfig => PKGCONFIGDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib/pkgconfig, PKGCONFIGDIR_REL_LIBDIR = pkgconfig
+DEBUG: CMAKECONFIGDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib/cmake/OpenSSL => CMAKECONFIGDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/install/lib/cmake/OpenSSL, CMAKECONFIGDIR_REL_LIBDIR = cmake/OpenSSL
+DEBUG: all keys: APPLINKDIR, BINDIR, CMAKECONFIGDIR, ENGINESDIR, INCLUDEDIR, LDLIBS, LIBDIR, MODULESDIR, PKGCONFIGDIR, PREFIX, VERSION, libdir
+No value given for CMAKECONFIGDIR
+No value given for PKGCONFIGDIR
+No value given for libdir
+DEBUG: PREFIX = . => PREFIX = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src
+DEBUG: libdir = . => libdir = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src
+DEBUG: BINDIR = apps => BINDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src/apps, BINDIR_REL_PREFIX = apps
+DEBUG: LIBDIR =  => LIBDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src, LIBDIR_REL_PREFIX = 
+DEBUG: INCLUDEDIR = [ include, ./include ] => INCLUDEDIR = [ /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src/include, /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src/include ], INCLUDEDIR_REL_PREFIX = [ include, ./include ]
+DEBUG: APPLINKDIR = ms => APPLINKDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src/ms, APPLINKDIR_REL_PREFIX = ms
+DEBUG: ENGINESDIR = engines => ENGINESDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src/engines, ENGINESDIR_REL_LIBDIR = engines
+DEBUG: MODULESDIR = providers => MODULESDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src/providers, MODULESDIR_REL_LIBDIR = providers
+DEBUG: PKGCONFIGDIR = . => PKGCONFIGDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src, PKGCONFIGDIR_REL_LIBDIR = .
+DEBUG: CMAKECONFIGDIR = . => CMAKECONFIGDIR = /Users/benediktillich/repos/up-transport-mqtt5-rust/target/debug/build/openssl-sys-064ed93cc8644014/out/openssl-build/build/src, CMAKECONFIGDIR_REL_LIBDIR = .
+In file included from In file included from ssl/d1_lib.c:14:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                             ssl/d1_msg.c : 10 :
+ In file included from  ssl/ssl_local.h : 1827 :
+ In file included from  ssl/quic/quic_local.h : 14 In file included from ssl/bio_ssl.c:17:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499  | \#
+d      e| f         ^ine LIST_FOREACH(var, head, field)                                  \
+      |         ^
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/event_queue.c:12:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/d1_srtp.c:18:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/methods.c:13:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/pqueue.c:10:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ssl/s3_enc.c:12:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/s3_lib.c:15:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/s3_msg.c:10:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/ssl_asn1.c:13:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/ssl_cert.c:24:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/ssl_conf.c:11:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define In file included from ssl/ssl_cert_comp.c:11:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+In file included from ssl/ssl_ciph.c:21:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+In file included from ssl/ssl_lib.c:13:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/ssl_init.c:16:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/ssl_rsa.c:11:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/ssl_mcnf.c:13:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/ssl_sess.c:20:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ssl/ssl_txt.c:13:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/ssl_stat.c:12:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/ssl_utst.c:10:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/t1_enc.c:12:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+In file included from ssl/t1_trce.c:10:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/t1_lib.c:26:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ssl/tls_srp.c:23:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/tls_depr.c:14:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/tls13_enc.c:11:
+In file included from ssl/ssl_local.h:1827:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ssl/quic/quic_demux.c:10:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/quic/quic_engine.c:10:
+In file included from include/internal/quic_engine.h:15:
+In file included from include/internal/quic_port.h:15:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+In file included from ssl/quic/quic_impl.c:14:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/quic/quic_method.c:12:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/quic/quic_port.c:10:
+In file included from include/internal/quic_port.h:15:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/quic/quic_record_rx.c:11:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+In file included from ssl/quic/quic_record_shared.c:4:
+In file included from ssl/quic/../ssl_local.h:1827:
+In file included from ssl/quic/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/quic/quic_rx_depack.c:13:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/quic/quic_rstream.c:12:
+In file included from include/internal/quic_stream.h:20:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/quic/quic_record_util.c:11:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ssl/quic/quic_sstream.c:10:
+In file included from include/internal/quic_stream.h:20:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ssl/quic/quic_stream_map.c:10:
+In file included from include/internal/quic_stream_map.h:19:
+In file included from include/internal/quic_stream.h:20:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/quic/quic_thread_assist.c:11:
+In file included from ssl/quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/quic/quic_tls.c:11:
+In file included from include/internal/quic_tls.h:14:
+In file included from include/internal/quic_stream.h:20:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/quic/quic_tserver.c:10:
+In file included from include/internal/quic_tserver.h:15:
+In file included from include/internal/quic_stream.h:20:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/quic/quic_trace.c:11:
+In file included from ssl/quic/../ssl_local.h:1827:
+In file included from ssl/quic/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/quic/quic_wire.c:12:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ssl/record/rec_layer_d1.c:12:
+In file included from ssl/record/../ssl_local.h:1827:
+In file included from ssl/record/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/record/rec_layer_s3.c:14:
+In file included from ssl/record/../ssl_local.h:1827:
+In file included from ssl/record/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/record/methods/dtls_meth.c:11:
+In file included from ssl/record/methods/../../ssl_local.h:1827:
+In file included from ssl/record/methods/../../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/record/methods/ssl3_meth.c:13:
+In file included from ssl/record/methods/../../ssl_local.h:1827:
+In file included from ssl/record/methods/../../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/record/methods/tls1_meth.c:15:
+In file included from ssl/record/methods/../../ssl_local.h:1827:
+In file included from ssl/record/methods/../../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | #1 warning generated define LIST_FOREACH(p, nam.
+e, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/record/methods/tls13_meth.c:12:
+In file included from ssl/record/methods/../../ssl_local.h:1827:
+In file included from ssl/record/methods/../../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+In file included from ssl/record/methods/tls_common.c:20:
+In file included from ssl/record/methods/../../ssl_local.h:1827:
+In file included from ssl/record/methods/../../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/record/methods/tls_multib.c:10:
+In file included from ssl/record/methods/../../ssl_local.h:1827:
+In file included from ssl/record/methods/../../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/record/methods/tlsany_meth.c:11:
+In file included from ssl/record/methods/../../ssl_local.h:1827:
+In file included from ssl/record/methods/../../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/rio/poll_immediate.c:13:
+In file included from ssl/rio/../ssl_local.h:1827:
+In file included from ssl/rio/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/statem/extensions.c:18:
+In file included from ssl/statem/../ssl_local.h:1827:
+In file included from ssl/statem/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+In file included from ssl/statem/extensions_clnt.c:11:
+In file included from ssl/statem/../ssl_local.h:1827:
+In file included from ssl/statem/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/statem/extensions_cust.c:13:
+In file included from ssl/statem/../ssl_local.h:1827:
+In file included from ssl/statem/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/statem/statem.c:17:
+In file included from ssl/statem/../ssl_local.h:1827:
+In file included from ssl/statem/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/statem/extensions_srvr.c:11:
+In file included from ssl/statem/../ssl_local.h:1827:
+In file included from ssl/statem/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/statem/statem_clnt.c:15:
+In file included from ssl/statem/../ssl_local.h:1827:
+In file included from ssl/statem/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+In file included from ssl/statem/statem_dtls.c:14:
+In file included from ssl/statem/../ssl_local.h:1827:
+In file included from ssl/statem/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+In file included from ssl/statem/statem_lib.c:14:
+In file included from ssl/statem/../ssl_local.h:1827:
+In file included from ssl/statem/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+In file included from ssl/statem/statem_srvr.c:13:
+In file included from ssl/statem/../ssl_local.h:1827:
+In file included from ssl/statem/../quic/quic_local.h:14:
+In file included from include/internal/quic_ssl.h:15:
+In file included from include/internal/quic_record_rx.h:18:
+In file included from include/internal/quic_demux.h:18:
+include/internal/list.h:27:10: warning: 'LIST_FOREACH' macro redefined [-Wmacro-redefined]
+   27 | # define LIST_FOREACH(p, name, l)                                           \
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/queue.h:499:9: note: previous definition is here
+  499 | #define LIST_FOREACH(var, head, field)                                  \
+      |         ^
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.

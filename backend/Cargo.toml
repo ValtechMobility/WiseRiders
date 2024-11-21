@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-up-client-mqtt5-rust = { path = "up-transport-mqtt5/" }
+up-client-mqtt5-rust = { path = "up-transport-mqtt/" }
 up-rust = { version = "0.2.0", default-features = false }
 tokio = { version = "1.35.1", default-features = false, features = ["rt", "rt-multi-thread", "sync", "time"] }
 env_logger = { version = "0.10.1" }
