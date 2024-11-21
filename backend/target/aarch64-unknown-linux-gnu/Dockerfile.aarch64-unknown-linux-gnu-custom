@@ -1,8 +1,0 @@
-
-                FROM ghcr.io/cross-rs/aarch64-unknown-linux-gnu:main
-                ARG CROSS_DEB_ARCH=
-                ARG CROSS_SCRIPT
-                ARG CROSS_TARGET
-                COPY $CROSS_SCRIPT /pre-build-script
-                RUN chmod +x /pre-build-script
-                RUN ./pre-build-script $CROSS_TARGET
