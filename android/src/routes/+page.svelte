@@ -5,7 +5,11 @@
   let show_ip = $state(true);
   let log = $state("");
   let crashed = $state(false);
+  let audio;
 
+  function playAudio() {
+    audio.play();
+  }
   async function flash() {
     const response = await invoke("fetch_url", {
       url: `http://${ip}/`,
@@ -27,20 +31,31 @@
       }
     }, 1000);
   }
+
+  setTimeout(playAudio, 5000);
+
+  $effect(() => {
+    if (crashed) {
+      playAudio();
+    }
+  });
 </script>
 
 <main class="container" class:crashed>
   {#if show_ip}
     <input type="text" bind:value={ip} />
     <button onclick={start}>Connect</button>
+    <button onclick={playAudio}>Init audio</button>
   {:else}
     <button onclick={flash}
-      ><img src="/honk.svg" alt="Honk and flash" width="100" /></button
+      ><img src="/honk.svg" alt="Honk  and flash" width="100" /></button
     >
+
     {#if crashed}
       <p>Driver crashed</p>
     {/if}
   {/if}
+  <audio bind:this={audio} src="/crash.mp3" controls={show_ip}></audio>
 </main>
 
 <style>
