@@ -49,10 +49,16 @@ EXPOSE 80/udp
 EXPOSE 443/tcp
 EXPOSE 443/udp
 
-# expose standard mqtt ports with explicit tcp protocol
-EXPOSE 1883/tcp   # standard mqtt unencrypted
-EXPOSE 8083/tcp   # mqtt over websockets
-EXPOSE 8883/tcp   # secure mqtt (mqtts)
-EXPOSE 8084/tcp   # secure mqtt over websockets
+# standard mqtt unencrypted
+EXPOSE 1883/tcp   
+
+# mqtt over websockets
+EXPOSE 8083/tcp
+
+# secure mqtt (mqtts)
+EXPOSE 8883/tcp
+
+# secure mqtt over websockets
+EXPOSE 8084/tcp
 
 CMD ["/usr/src/app/target/release/uprotocol_backend"]
