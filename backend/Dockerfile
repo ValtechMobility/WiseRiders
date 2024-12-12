@@ -43,4 +43,16 @@ COPY ./ .
 # Build and execute the Rust program
 RUN cargo build --release
 
+# expose common http ports
+EXPOSE 80/tcp
+EXPOSE 80/udp
+EXPOSE 443/tcp
+EXPOSE 443/udp
+
+# expose standard mqtt ports with explicit tcp protocol
+EXPOSE 1883/tcp   # standard mqtt unencrypted
+EXPOSE 8083/tcp   # mqtt over websockets
+EXPOSE 8883/tcp   # secure mqtt (mqtts)
+EXPOSE 8084/tcp   # secure mqtt over websockets
+
 CMD ["/usr/src/app/target/release/uprotocol_backend"]
